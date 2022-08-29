@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: demoservice
+
+---
+spring:
+  profiles: dev
+configsources:
+  - sourceDevYamlTest1
+  - sourceDevYamlTest2
+server:
+  port: 8081
+
+
+---
+spring:
+  profiles: prod
+configsources:
+    - sourceProdYamlTest1
+    - sourceProdYamlTest2
+server:
+  port: 4431
